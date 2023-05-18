@@ -1,0 +1,102 @@
+<!-- <p>fair-details works!</p> -->
+<!-- {{fairObj | json}} -->
+
+
+<div class="bannerContainer shadow-lg  mb-5">
+
+    <div class="img-gradient">
+        <img [src]="fairObj.bannerUrl" alt="" class="img-fluid">
+    </div>
+
+
+
+
+
+
+
+    <div class="banner-content text-white">
+        <h3 class="font-weight-bold">
+            {{fairObj.fairName}}
+        </h3>
+
+        <h6>
+            {{fairObj.startDate | date}} - {{fairObj.endDate | date}}
+        </h6>
+
+        <button class="upgradeBtn">
+            Upgrade to Register for Fair
+        </button>
+    </div>
+</div>
+
+
+<div class="date_location p-4">
+    <div class="row">
+        <div class="col-sm-4">
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h5>
+                            Date
+                        </h5>
+                    </div>
+                    <p>
+                        {{fairObj.startDate | date}}
+                    </p>
+                    <p>
+                        {{fairObj.endDate | date}}
+                    </p>
+                    <p>
+                        {{fairObj.fairStartTime}} - {{fairObj.fairEndTime}}
+                    </p>
+                    <p>
+                        {{fairObj.timezoneId}}
+                    </p>
+
+                    <a href="javascrpt:;" class="d-block my-3">Add to calender</a>
+
+                    <h5>
+                        Last Registration Date
+                    </h5>
+                    <p>
+                        {{fairObj.endDate | date}}
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-sm-4">
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h5>
+                            Location
+                        </h5>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 mt-5">
+        <h4>Description</h4>
+        <div [innerHTML]="fairObj.candidateDescription">
+
+        </div>
+    </div>
+</div>
+>
+
+<!-- <div [innerHTML]="fairObj.schoolDescription">
+
+</div> -->

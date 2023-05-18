@@ -1,0 +1,22 @@
+.card {
+    cursor: pointer;
+    min-height: 130px;
+
+    p {
+        margin: 0;
+    }
+
+    .card-body {
+        padding: 10px 10px;
+    }
+
+    // :hover {
+    //     background-color: red;
+    // }
+}
+
+.active_selected:hover,
+.active_selected:focus,
+.active_selected:active {
+    border: 1px solid green;
+}
