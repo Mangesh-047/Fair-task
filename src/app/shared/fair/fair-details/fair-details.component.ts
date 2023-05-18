@@ -22,7 +22,7 @@ export class FairDetailsComponent implements OnInit {
     this._route.params
       .subscribe((params: Params) => {
         this.fairId = params['fairId']
-        console.log(this.fairId);
+        // console.log(this.fairId);
         this.fairObj = this._fairService.getFair(this.fairId)
       })
   }

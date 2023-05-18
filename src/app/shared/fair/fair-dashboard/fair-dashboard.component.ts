@@ -17,6 +17,8 @@ export class FairDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.fairArray = this._fairService.getAllFair()
+
+
   }
 
 }
