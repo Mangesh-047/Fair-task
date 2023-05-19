@@ -1,19 +1,25 @@
-<div class="form-group">
-    <label for="pname">Product Name</label>
-    <input type="text" class="form-control" [value]="prodObj.pname" #pname [disabled]="!canEdit">
-</div>
+<div class="card shadow">
+    <div class="card-body">
 
-<div class="form-group">
-    <label for="pstatus">Status</label>
-    <select name="" id="" class="form-control" [value]="prodObj.pstatus" #pstatus [disabled]="!canEdit">
-        <option value="In Progress">In Progress</option>
-        <option value="Dispatched">Dispatched</option>
-        <option value="Delivered">Delivered</option>
-    </select>
-</div>
+        <div class="form-group">
+            <label for="pname">Product Name</label>
+            <input type="text" class="form-control" [value]="prodObj.pname" #pname [disabled]="!canEdit">
+        </div>
 
-<div class="text-right">
-    <button class="btn btn-warning" (click)="onUpdate(pname, pstatus)" [disabled]="!canEdit">
-        Update
-    </button>
+        <div class="form-group">
+            <label for="pstatus">Status</label>
+            <select name="" id="" class="form-control" [value]="prodObj.pstatus" #pstatus [disabled]="!canEdit">
+                <option value="In Progress">In Progress</option>
+                <option value="Dispatched">Dispatched</option>
+                <option value="Delivered">Delivered</option>
+            </select>
+        </div>
+
+        <div class="text-right">
+            <button class="btn btn-warning" (click)="onUpdate(pname, pstatus)" [disabled]="!canEdit">
+                Update
+            </button>
+        </div>
+
+    </div>
 </div>

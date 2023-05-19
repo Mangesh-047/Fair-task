@@ -9,6 +9,7 @@ import { } from './shared/components/pipes/location.pipe';
 import { NavClickDirective } from './shared/directives/nav-click.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './shared/products/products.module';
+import { UsersModule } from './shared/users/users.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProductsModule } from './shared/products/products.module';
     AppRoutingModule,
     FairModule,
     BrowserAnimationsModule,
-    ProductsModule
+    ProductsModule,
+    UsersModule
   ],
   exports: [
   ],
