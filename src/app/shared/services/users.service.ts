@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Iuser, uRole } from '../model/users';
+import { SnackbarService } from './snackbar.service';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +29,9 @@ export class UsersService {
       userRole: 0
     },
   ]
-  constructor() { }
+  constructor(
+    private _snakbarService: SnackbarService
+  ) { }
 
   getAllUsers(): Array<Iuser> {
     return this.usersArray
@@ -44,5 +47,7 @@ export class UsersService {
         e.name = obj.name
       }
     })
+    this._snakbarService.snackbarOpen(`The username is updated to ${obj.name}`)
+
   }
 }

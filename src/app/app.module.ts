@@ -3,31 +3,40 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FairModule } from './shared/fair/fair.module';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { } from './shared/components/pipes/location.pipe';
 import { NavClickDirective } from './shared/directives/nav-click.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './shared/products/products.module';
 import { UsersModule } from './shared/users/users.module';
+import { DashboardComponent } from './shared/components/dashboard/dashboard.component';
+import { FairModule } from './shared/fair/fair.module';
+import { LoginComponent } from './shared/components/login/login.component';
+import { MaterialModule } from './shared/material/material.module';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     NavClickDirective,
+    DashboardComponent,
+    LoginComponent,
+    PageNotFoundComponent,
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FairModule,
     BrowserAnimationsModule,
     ProductsModule,
-    UsersModule
+    UsersModule,
+    FairModule,
+    MaterialModule
   ],
   exports: [
+    MaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

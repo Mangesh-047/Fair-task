@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Iproduct, pstatus } from '../model/products';
+import { SnackbarService } from './snackbar.service';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +33,9 @@ export class ProductsService {
       canReturn: 0
     },
   ]
-  constructor() { }
+  constructor(
+    private _snackbarService: SnackbarService
+  ) { }
 
   getAllProducts(): Array<Iproduct> {
     return this.productsArray
@@ -49,5 +52,7 @@ export class ProductsService {
         e.pstatus = obj.pstatus
       }
     })
+
+    this._snackbarService.snackbarOpen(`the product information successfully updated`)
   }
 }

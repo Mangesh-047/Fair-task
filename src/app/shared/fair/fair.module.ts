@@ -4,7 +4,6 @@ import { FairDashboardComponent } from './fair-dashboard/fair-dashboard.componen
 import { FairCardComponent } from './fair-card/fair-card.component';
 import { FairDetailsComponent } from './fair-details/fair-details.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { LocationPipe } from '../components/pipes/location.pipe';
 
 
 
@@ -13,7 +12,6 @@ import { LocationPipe } from '../components/pipes/location.pipe';
     FairDashboardComponent,
     FairCardComponent,
     FairDetailsComponent,
-    LocationPipe
   ],
   imports: [
     CommonModule,
