@@ -2,16 +2,15 @@
 {{fairArray | json}}
  -->
 
-<div class="container-fluid">
-    <div class="row mt-5">
-        <div class="col-sm-4">
-            <h5 class="mb-4">
-                Upcoming Fairs and iFairs
-            </h5>
-            <app-fair-card [fairData]="fair" *ngFor="let fair of fairArray"></app-fair-card>
-        </div>
-        <div class="col-sm-8">
-            <app-fair-details></app-fair-details>
-        </div>
+
+<div class="row mt-5">
+    <div class="col-sm-4">
+        <h2 class="mb-4">
+            Upcoming Fairs and iFairs
+        </h2>
+        <app-fair-card [fairData]="fair" *ngFor="let fair of fairArray"></app-fair-card>
+    </div>
+    <div class="col-sm-8">
+        <app-fair-details></app-fair-details>
     </div>
 </div>

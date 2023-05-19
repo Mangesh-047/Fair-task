@@ -7,27 +7,38 @@
             </div>
             <div class="col-sm-10">
 
-                <p class="card-title font-weight-bold">
+                <h3 class="card-title font-weight-bold m-0">
                     {{fairData.fairName}}
-                </p>
+                </h3>
 
                 <p>
-                    {{fairData.startDate | date }} - {{fairData.endDate | date}}
+                    <i class="fa-solid fa-calendar-days text-secondary"></i>
+                    {{fairData.startDate | date }} -
+                    {{fairData.endDate |
+                    date}}
+
+                    <br> &nbsp;&nbsp;
+
+                    <a href="javascript:;">
+                        Add to calender
+                    </a>
+
                 </p>
 
 
-                <a href="javascript:;">
-                    Add to calender
-                </a>
 
-                <p>
+
+                <p *ngIf="fairCity">
+                    <i class="fa-solid fa-location-dot text-secondary"></i>
+
                     {{fairCity}}
 
                 </p>
 
 
                 <p>
-                    {{fairData.numberOfSchoolsRegistered}} schools Registered
+                    <i class="fa-solid fa-graduation-cap text-secondary"></i> {{fairData.numberOfSchoolsRegistered}}
+                    schools Registered
                 </p>
             </div>
         </div>

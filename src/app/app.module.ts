@@ -7,6 +7,8 @@ import { FairModule } from './shared/fair/fair.module';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { } from './shared/components/pipes/location.pipe';
 import { NavClickDirective } from './shared/directives/nav-click.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductsModule } from './shared/products/products.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,11 @@ import { NavClickDirective } from './shared/directives/nav-click.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FairModule
+    FairModule,
+    BrowserAnimationsModule,
+    ProductsModule
   ],
   exports: [
-
   ],
   providers: [],
   bootstrap: [AppComponent]
