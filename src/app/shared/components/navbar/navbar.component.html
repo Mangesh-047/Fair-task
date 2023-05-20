@@ -9,21 +9,28 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
                 <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/users">Users</a>
+
+
             </li>
 
+
+            <ng-container *ngIf="userRole.includes('ADMIN')">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/users">Users</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/fairs/62f63b4caa0bf10009d0d86a">Fairs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/products">Products</a>
+                </li>
+            </ng-container>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/fairs/62f63b4caa0bf10009d0d86a">Fairs</a>
+                <button class="btn btn-danger" (click)="onLogOut($event)">Log Out </button>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/products">Products</a>
-            </li>
-            <li class="nav-item">
-                <button class="btn btn-danger" (click)="onLogOut()">Log Out</button>
-            </li>
 
         </ul>
 

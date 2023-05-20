@@ -1,3 +1,5 @@
+import { Observable } from "rxjs";
+
 export interface Iproduct {
     pname: string;
     id: number;
@@ -11,4 +13,9 @@ export enum pstatus {
     dis = 'Dispatched',
     del = 'Delivered',
 
+}
+
+
+export interface IcanDeactivateComp {
+    canDeactivate: () => Observable<boolean> | Promise<boolean> | boolean
 }

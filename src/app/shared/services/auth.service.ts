@@ -43,16 +43,14 @@ export class AuthService {
       this._router.navigate(['/home'])
     } else if ((email.length && pass.length) <= 0) {
       this._snackbarService.snackbarOpen(`please enter email and password....!!!`)
-
     } else {
       this._snackbarService.snackbarOpen(`....Invaild Email and Password`)
       setTimeout(() => {
-        this._snackbarService.snackbarOpen(`EMAIL: jhon@gmail.com , PASSWORD: zaq1ZAQ!`)
+        this._snackbarService.snackbarOpen(`EMAIL: jen@gmail.com , PASSWORD: zaq1ZAQ!`)
 
       }, 2000);
 
     }
-
 
 
   }
