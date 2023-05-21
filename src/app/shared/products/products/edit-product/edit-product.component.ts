@@ -1,7 +1,9 @@
+import { ReturnStatement } from '@angular/compiler';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { DialogComponent } from 'src/app/shared/material/dialog/dialog.component';
 import { IcanDeactivateComp, Iproduct, pstatus } from 'src/app/shared/model/products';
 import { ProductsService } from 'src/app/shared/services/products.service';
 
@@ -24,22 +26,37 @@ export class EditProductComponent implements OnInit, IcanDeactivateComp {
   @ViewChild("pstatus")
   pstatus!: ElementRef<HTMLSelectElement>
 
+
+
+  val: boolean = false
   constructor(
     private _route: ActivatedRoute,
     private _router: Router,
     private _productsService: ProductsService,
-  ) { }
+    public dialog: MatDialog
+
+  ) {
+
+    // console.log(this._dialogService.value);
+  }
 
 
   canDeactivate(): boolean | Promise<boolean> | Observable<boolean> {
 
-    if (this.prodObj.pname !== this.pname.nativeElement.value || this.prodObj.pstatus !== this.pstatus.nativeElement.value) {
-      return confirm('Are you sure, you want to Discard these changes')
+    if ((this.prodObj.pname !== this.pname.nativeElement.value || this.prodObj.pstatus !== this.pstatus.nativeElement.value)) {
 
-    }
-    else {
+
+      return this.dialog.open(DialogComponent).afterClosed()
+
+    } else {
       return true
     }
+
+
+
+
+
+
   }
 
 
@@ -54,7 +71,7 @@ export class EditProductComponent implements OnInit, IcanDeactivateComp {
         this.prodId = +params['id']
       })
 
-    console.log(this.pname);
+    // console.log(this.pname);
 
     this.prodObj = this._productsService.getProduct(this.prodId)
 

@@ -4,6 +4,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './products/product/product.component';
 import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ]
 })
 export class ProductsModule { }

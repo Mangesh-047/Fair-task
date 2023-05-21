@@ -4,6 +4,7 @@ import { UsersComponent } from './users/users.component';
 import { RouterModule } from '@angular/router';
 import { UserComponent } from './users/user/user.component';
 import { EditUserComponent } from './users/edit-user/edit-user.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -15,7 +16,8 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ]
 })
 export class UsersModule { }

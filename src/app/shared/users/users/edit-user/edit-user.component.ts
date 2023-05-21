@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, CanDeactivate, Params, Router } from '@angular/router';
+import { IcanDeactivateComp } from 'src/app/shared/model/products';
 import { Iuser } from 'src/app/shared/model/users';
 import { UsersService } from 'src/app/shared/services/users.service';
 
@@ -17,6 +18,8 @@ export class EditUserComponent implements OnInit {
     private _route: ActivatedRoute,
     private _usersService: UsersService
   ) { }
+
+
 
   ngOnInit(): void {
     this._route.params
